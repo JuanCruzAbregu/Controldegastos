@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.n3twork.controldegastos.Activities.MainActivity">
+
+    <TextView
+        android:id="@+id/textViewFecha"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Nomviembre 2017"
+        android:padding="10dp"
+        android:textSize="15dp"
+        android:background="#388e3c"
+        android:textColor="#ffffff"
+        android:textStyle="bold"/>
+
+    <LinearLayout
+        android:id="@+id/linear1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:layout_below="@id/textViewFecha">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Ingresos"
+            android:textSize="15sp"
+            android:layout_weight="1"
+            android:textColor="#40ae44"/>
+
+        <TextView
+            android:id="@+id/textViewIngresos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="$ 0,00"
+            android:textSize="15sp"
+            android:gravity="end"
+            android:textColor="#40ae44"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linear2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:layout_below="@id/linear1">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Gastos"
+            android:textSize="15sp"
+            android:layout_weight="1"
+            android:textColor="#ff0000"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="$ 0,00"
+            android:gravity="end"
+            android:textSize="15sp"
+            android:textColor="#ff0000"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linear3"
+        android:orientation="horizontal"
+        android:layout_below="@+id/linear2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:background="#c49d9797">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="#000000"
+            android:text="Saldo"
+            android:textSize="15sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="$ 0,00"
+            android:gravity="end"
+            android:textSize="15sp"
+            android:textColor="#000000"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:paddingTop="10dp"
+        android:paddingLeft="10dp"
+        android:paddingBottom="10dp"
+        android:id="@+id/textViewHistorial"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Historial"
+        android:background="#388e3c"
+        android:textColor="#ffffff"
+        android:textStyle="bold"
+        android:layout_below="@+id/linear3"/>
+
+    <ListView
+
+        android:id="@+id/listViewBalance"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textViewHistorial">
+
+    </ListView>
+
+
+    <com.github.clans.fab.FloatingActionMenu
+        android:id="@+id/menuFAB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="11dp"
+        fab:menu_fab_size="normal"
+        fab:menu_showShadow="true"
+        fab:menu_shadowColor="#66000000"
+        fab:menu_shadowRadius="4dp"
+        fab:menu_shadowXOffset="1dp"
+        fab:menu_shadowYOffset="4dp"
+        fab:menu_colorNormal="@color/colorPrimary"
+        fab:menu_colorPressed="#4d5ebd"
+        fab:menu_colorRipple="#99FFFFFF"
+        fab:menu_animationDelayPerItem="55"
+        fab:menu_icon="@drawable/fab_add"
+        fab:menu_buttonSpacing="0dp"
+        fab:menu_labels_margin="0dp"
+        fab:menu_labels_showAnimation="@anim/fab_slide_in_from_right"
+        fab:menu_labels_hideAnimation="@anim/fab_slide_out_to_right"
+        fab:menu_labels_padding="8dp"
+        fab:menu_labels_textColor="#FFFFFF"
+        fab:menu_labels_textSize="15sp"
+        fab:menu_labels_cornerRadius="3dp"
+        fab:menu_labels_colorNormal="#333333"
+        fab:menu_labels_colorPressed="#444444"
+        fab:menu_labels_colorRipple="#66FFFFFF"
+        fab:menu_labels_showShadow="true"
+        fab:menu_labels_singleLine="false"
+        fab:menu_labels_ellipsize="none"
+        fab:menu_labels_maxLines="-1"
+        fab:menu_labels_position="left"
+        fab:menu_openDirection="up"
+        fab:menu_backgroundColor="@android:color/transparent"
+        fab:menu_fab_label="Menú"
+        fab:menu_fab_show_animation="@anim/show_from_bottom"
+        fab:menu_fab_hide_animation="@anim/hide_to_bottom">
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/ingresosFAB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_add"
+            app:fab_size="mini"
+            app:fab_label="Ingresos"
+            app:fab_colorNormal="#40ae44"
+            app:fab_colorPressed="#54f25a"
+            app:fab_colorRipple="#99FFFFFF"/>
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/gastosFAB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_minus"
+            app:fab_size="mini"
+            app:fab_label="Gastos"
+            app:fab_colorNormal="#ff0000"
+            app:fab_colorPressed="#ff3943"
+            app:fab_colorRipple="#99FFFFFF"/>
+
+    </com.github.clans.fab.FloatingActionMenu>
+
+</RelativeLayout>
